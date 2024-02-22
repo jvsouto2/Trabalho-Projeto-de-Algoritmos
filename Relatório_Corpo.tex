@@ -1,0 +1,140 @@
+\documentclass[12pt,arial]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{lipsum}
+\usepackage{tabto}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{pgfplots}
+\usepackage{float} 
+
+
+\hyphenation{palavra}
+\usepackage[top=3cm,left=3cm,bottom=2cm,right=2cm]{geometry}
+\usepackage{amsmath}
+
+% Mude para o seu nome
+\author{[João Vítor Souto de Lima]}
+\usepackage{setspace}
+\setstretch{1.5}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\textbf{Universidade Federal de Viçosa}
+			\textit{\\Campus}
+			\textbf{Rio Paranaíba}
+			\textnormal{\\\vspace{4cm}João Vítor Souto - 5998}
+			\textbf{\\\vspace{5cm}ESTUDO E ANÁLISE DA COMPLEXIDADE DE DIFERENTES ALGORITMOS DE ORDENAÇÃO}
+			\textbf{\\\vspace{5cm}Rio Paranaíba - MG \\ 2023}
+		\end{center}
+	\end{titlepage}
+	
+		\begin{titlepage}
+			\begin{center}
+				\textbf{Universidade Federal de Viçosa}
+				\textit{\\Campus}
+				\textbf{Rio Paranaíba}
+				\textnormal{\\\vspace{3cm}João Vítor Souto - 5998}
+				\textbf{\\\vspace{4cm}ESTUDO E ANÁLISE DA COMPLEXIDADE DE DIFERENTES ALGORITMOS DE ORDENAÇÃO\vspace{3cm}}
+					\begin{flushright}
+						\begin{minipage}{.5\textwidth}
+							\textnormal{Trabalho apresentado para obtenção de créditos na disciplina SIN213 - Projeto de Algoritmo da Universidade Federal de Viçosa - Campus de Rio Paranaíba, ministrada pelo Professor Pedro Moisés de Souza.}
+						\end{minipage}
+					\end{flushright}
+					
+				\textbf{\\\vspace{3cm}Rio Paranaíba - MG \\ 2023}
+				
+			\end{center}
+		\end{titlepage}
+		
+		
+		\section{RESUMO}
+		\input{Resumo}
+		\newpage
+
+            % Sumário
+		\tableofcontents
+		\newpage
+  
+		\section{INTRODUÇÃO}
+		\input{introducao}
+		\newpage
+
+            \section{ALGORITMOS}
+		\subsection{Insertion Sort}
+		\input{Algoritmos/insertion_sort}
+        \subsection{Selection Sort}
+		\input{Algoritmos/selection_sort}
+        \subsection{Shell Sort}
+		\input{Algoritmos/shell_sort}
+        \newpage
+        \subsection{Bubble Sort}
+		\input{Algoritmos/bubble_sort}
+		\newpage
+        \subsection{Merge Sort}
+		\input{Algoritmos/merge_sort}
+        \subsection{Quick Sort}
+		\input{Algoritmos/quick_sort}
+        \subsection{HeapSort}
+		\input{Algoritmos/heap_sort}
+        \subsection{Fila de Prioridades}
+		\input{Algoritmos/fila}
+         
+            \section{ANÁLISE DE COMPLEXIDADE}
+		\subsection{Insertion Sort}
+		\input{Analise/insertion_sort}
+        \newpage
+  	\subsection{Selection Sort}
+		\input{Analise/selection_sort}
+  	\subsection{Shell Sort}
+		\input{Analise/shell_sort}
+  	\subsection{Bubble Sort}
+		\input{Analise/bubble_sort}
+        \subsection{Merge Sort}
+		\input{Analise/merge_sort}
+        \subsection{Quick Sort}
+		\input{Analise/quick_sort}
+        \subsection{HeapSort}
+		\input{Analise/heap_sort}
+	    \newpage
+     
+	
+		\section{TABELA E GRÁFICO}
+        \subsection{Insertion Sort}
+		\input{Tabela&Grafico/insertion_sort}
+        \newpage
+        \subsection{Selection Sort}
+		\input{Tabela&Grafico/selection_sort}
+        \newpage
+        \subsection{Shell Sort}
+		\input{Tabela&Grafico/shell_sort}
+        \newpage
+        \subsection{Bubble Sort}
+		\input{Tabela&Grafico/bubble_sort}
+        \newpage
+        \subsection{Merge Sort}
+		\input{Tabela&Grafico/merge_sort}
+        \newpage
+        \subsection{Insertion X Merge X Quick Sort}
+		\input{Tabela&Grafico/quickx_sort}
+        \subsection{HeapSort}
+		\input{Tabela&Grafico/heap_sort}
+        \newpage
+        \subsection{Geral}
+		\input{Tabela&Grafico/geral}
+		\newpage
+  
+		\section{CONCLUSÃO}
+		\input{conclusao}
+		\newpage
+  
+		\section{REFERÊNCIAS BIBLIOGRÁFICAS}
+		\bibliographystyle{plain}
+        \bibliography{referencias}
+        \include{file}
+
+        	
+\end{document}

@@ -1,0 +1,23 @@
+A análise de complexidade do algoritmo HeapSort, embora seja similar em termos de desafios aos métodos anteriormente discutidos, apresenta algumas nuances próprias.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|l|c|c|}
+\hline
+\textbf{Linhas} & \multicolumn{1}{c|}{\textbf{Algoritmo}} & \textbf{Custo} & \textbf{Vezes} \\ \hline
+1               & Construir o heap                         & \(C_1\)        & 1               \\ \hline
+2               & para \(i =\) tamanho do heap até \(2\)   & \(C_2\)        & \(n-1\)         \\ \hline
+3               & trocar \(A[1]\) com \(A[i]\)             & \(C_3\)        & \(n-1\)         \\ \hline
+4               & decrementar tamanho do heap              & \(C_4\)        & \(n-1\)         \\ \hline
+5               & heapify(\(A, 1\))                        & \(C_5\)        & \(n \log n\)    \\ \hline
+\end{tabular}
+\caption{Análise de complexidade do HeapSort.}
+\label{tab:heapsort-complexity}
+\end{table}
+
+\begin{itemize}
+  \item[.] O procedimento \texttt{ReMake} é crucial no HeapSort. No pior caso, ele realiza aproximadamente $\log n$ operações. Isso ocorre porque o procedimento opera ao longo de um caminho da árvore, do nível mais profundo até a raiz, e a altura de um heap é proporcional a $\log n$, onde $n$ é o número de elementos no heap.
+  \item[.] O método \texttt{Build}, responsável por construir o heap inicial a partir de uma lista desordenada, executa uma série de chamadas ao procedimento \texttt{ReMake}. Como o \texttt{Build} começa do meio da lista e vai até o primeiro elemento, cada chamada de \texttt{ReMake} tem um custo diferente, mas em média também pode ser considerada como $O(\log n)$. Assim, o custo total do \texttt{Build} é proporcional a $O(n \log n)$.
+  \item[.] O laço interno do Programa 2.13, que representa a ordenação efetiva, executa o procedimento \texttt{ReMake} $n$ vezes (uma vez para cada elemento do heap). Cada uma dessas chamadas tem um custo de $\log n$, o que resulta em uma complexidade proporcional a $O(n \log n)$.
+  \item[.] Portanto, considerando todas essas etapas, o tempo de execução total do HeapSort é proporcional a $n \log n$ no pior caso. Esse desempenho é comparável ao de outros algoritmos eficientes de ordenação, como o MergeSort e o QuickSort, mas é obtido de uma maneira conceitualmente diferente, utilizando a estrutura de heap.
+\end{itemize}

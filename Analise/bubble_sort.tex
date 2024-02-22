@@ -1,0 +1,33 @@
+A complexidade temporal do Bubble Sort é classificada como \(O(n^2)\) em todos os três casos: melhor, médio e pior, devido à ausência de uma condição de parada precoce no algoritmo.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|c|}\hline
+    
+    \textbf{Linhas} & \textbf{Algoritmo} & \textbf{Custo} & \textbf{Vezes}
+    \\\hline
+1 & para i = 1 ate comprimento-1 & C1 & n-1\\
+    2 &\quad para j = 1 ate comprimento-i & C2 & \sum\limits_{1}^{\mbox{n-1}{}}T_j\\
+    3 &\quad se A[j] $>$ A[j+1] então & C3 & \sum\limits_{1}^{\mbox{n-1}{}}T_j-1\\
+    4 &\quad swap(A[j], A[j+1]) & C4 & \sum\limits_{1}^{\mbox{n-1}{}}T_j-1\\
+    \hline
+\end{tabular}
+\caption{Tabela de complexidade bubble.}
+\end{table}
+
+A fórmula geral para a complexidade temporal do Bubble Sort pode ser expressa como:
+\begin{equation}
+T(n) = C_1(n-1) + C_2\sum_{j=1}^{n-1} T_j + C_3\sum_{j=1}^{n-1} (T_j - 1) + C_4\sum_{j=1}^{n-1} (T_j - 1)
+\end{equation}
+
+Onde, 
+\[\sum_{j=1}^{n-1} T_j = \frac{n(n-1)}{2}\]
+resultante da soma dos \(n-1\) primeiros números naturais, sendo uma série aritmética.
+
+Ao desenvolver a fórmula geral, temos:
+\begin{align}
+T(n) &= C_1n - C_1 + C_2\left(\frac{n^2 - n}{2}\right) + C_3\left(\frac{n^2 - 3n + 2}{2}\right) + C_4\left(\frac{n^2 - 3n + 2}{2}\right) \\
+&= (C_2 + C_3 + C_4)\frac{n^2}{4} + \left(C_1 - C_2 - \frac{3(C_3 + C_4)}{2}\right)n - (C_1 + C_3 + C_4)
+\end{align}
+
+Portanto, reorganizando os termos, podemos concluir que a função de complexidade é quadrática, assim, \(T(n) = O(n^2)\).

@@ -1,0 +1,53 @@
+O Quick Sort é conhecido por sua eficiência em ordenar listas grandes, mas a sua complexidade de tempo varia consideravelmente dependendo de como o algoritmo é implementado, especialmente na escolha do pivô. Vamos analisar a complexidade nos casos médio, melhor e pior\cite{devto_quick_sort}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Linhas & Algoritmo & Custo & Vezes \\
+\hline
+1 & $X = A[P]$ & $C1$ & $1$ \\
+2 & $i = P-1$ & $C2$ & $1$ \\
+3 & $j = R-1$ & $C3$ & $1$ \\
+4 & \textbf{while} $1$ & $C4$ & $n$ \\
+5 & \textbf{repeat} $i = i+1$ & $C5$ & $n-1$ \\
+6 & \textbf{until} $A[i] \geq X$ & $C6$ & $n-1$ \\
+7 & \textbf{repeat} $j = j -1$ & $C7$ & $n-1$ \\
+8 & \textbf{until} $A[j] \leq X$ & $C8$ & $n-1$ \\
+9 & \textbf{if} $i < j$ & $C9$ & $n-1$ \\
+10 & \textbf{then} troca $A[i] \Leftrightarrow A[j]$ & $C10$ & $n-1$ \\
+11 & troca $A[P] \Leftrightarrow A[j]$ & $C11$ & $n-1$ \\
+\hline
+\end{tabular}
+\caption{Tabela de custos do Quick}
+\end{table}
+
+
+Melhor Caso:
+
+No melhor caso, o pivô divide a lista em duas partes iguais a cada passo. Isso leva a uma complexidade de tempo de O(nlogn), onde n é o número de elementos na lista.
+A complexidade pode ser expressa como:
+$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$
+Simplificando, isto resulta em:
+$T(n) = O(n \log n)$
+
+
+Caso Médio:
+
+No caso médio, a eficiência do Quick Sort é semelhante ao melhor caso, com uma complexidade de tempo também de 
+$T(n) = O(n \log n)$
+
+
+No entanto, isso depende fortemente de uma boa escolha de pivôs. Se os pivôs forem escolhidos aleatoriamente, a probabilidade de se obter um desempenho semelhante ao melhor caso é alta.
+Pior Caso:
+
+O pior caso ocorre quando o pivô escolhido é sempre o maior ou o menor elemento da lista. Isso resulta em uma divisão desigual, onde uma das sublistas tem n-1 elementos e a outra tem 0 elementos.
+A complexidade neste cenário é:
+$T(n) = T(n-1) + O(n)$
+
+
+Simplificando, isto resulta em:
+$T(n) = O(n^2)$
+
+
+Isso torna o Quick Sort muito ineficiente no pior caso.

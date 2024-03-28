@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1693947869 source:c:\users\usuario\onedrive\Área de trabalho\winpa\v2teste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<direct.h>
+
+1702512688 source:c:\users\usuario\onedrive\Área de trabalho\winpa\projetopa\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<direct.h>
+	<string.h>
+
